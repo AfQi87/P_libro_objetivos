@@ -1,15 +1,12 @@
 <?php
-  include "./templates/nav.php";
-    echo('<div class="container">');
-
+    include "./bd/conexion.php";
       $id_cli = $_POST["id_cli"];
-      $id_lib = $_GET["id"];
-      $coleccion = $_GET["coleccion"];
-      $estado = $_GET["estado"];
+      $id_lib = $_POST["id"];
+      $coleccion = $_POST["coleccion"];
+      $estado = $_POST["estado"];
       $busqueda = 'EXITOSA';
       $r = array();
       $cont = 0;
-
       $objetivos = array();
       $base_hechos = array();
       $obj_premisa = array();
@@ -358,6 +355,4 @@
         </script>
       ');
       }
-    echo('</div>');
-  include "./templates/footer.php";
 ?>
